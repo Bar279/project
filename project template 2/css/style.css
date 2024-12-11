@@ -1,0 +1,421 @@
+.container {
+    width: 100vw; /* makes sure that the "container" div is stretched to the left and right edges of our web browser */
+    height: auto;
+}
+
+section {
+    position: relative; /* This is needed so that all of our CSS positionings will work within all of our sections */
+}
+
+/* Typography */
+
+/* For Headers/Titles */
+
+@font-face{
+    font-family:AdobeVF;
+    src:url(../fonts/AdobeVFPrototype.ttf)
+}
+
+h1 {
+    font-size: 4em;
+    color: black;
+    position: absolute;
+    left: 80%;
+    top: 30%;
+    transform: translate(-360%,-300%);
+    font-family:AdobeVF ;
+}
+
+/* For Subheaders */
+h2 {
+    font-size: 2em;
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* translateX only moves the object horizontally */
+    top: 32px;
+}
+
+/* For Captions */
+h4 {
+    font-size: 1em;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+/* Navigation Bar */
+.navigation {
+    width: 100vw;
+    height: 40px;
+    background: aliceblue;
+    position: relative; /* Here, we use fixed positioning so that our nav bar always stays on top of the page */
+    z-index: 1; /* having a z-index larger than 0 ensures that our nav bar is on top of other content on the page */
+    padding: 10px 0;
+}
+
+ul {
+    list-style: none; /* this removes bullet points on our "list" */
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.3em;
+}
+
+li {
+    float: right; /* makes all of our links on the right side of the nav bar */
+    margin-left: 20px; /* gives 20px of spacing between each text link */
+}
+
+a {
+    color: purple;
+    text-decoration: none; /* removes the underline and blue color of our text links */
+}
+
+li:last-child { /* last-child only targets the last item on our list, which is our home page link */
+    float: left; /* make sure that the home page link is on the left of the page, not the right */
+    margin-left: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Styling for sections */
+section {
+    padding: 20px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Home Page CSS */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url('images/ima2.jpg') center/cover no-repeat;
+    background-size: contain;
+    margin-top:-200px;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    padding:20 /* Adjust this for centering the text vertically */
+}
+
+.home h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.home h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.home .button {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home .button:hover {
+    background-color: #008c99;
+}
+
+/* Section One */
+.one {
+    width: 1000px;
+    height: auto;
+    background: white;
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.one_left, .one_right {
+    width: 45%;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+
+}
+
+.one_left {
+    left: 0;
+}
+
+.one_right {
+    right: 0;
+}
+
+.one_img_left, .one_img_right {
+    width: 100%;  /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /
+   padding: 10px 0;
+}
+
+.one_txt_left, .one_txt_right {
+    font-size: 2em;
+    font-family: AdobeVF;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+}
+
+.one_bottom {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 500px;
+    padding: 40px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.one_img_bottom {
+    width: 45%;  /* Ensure it fits container */
+    height: 600px;
+    object-fit: cover;
+    margin: 0 auto;
+    position:relative;
+    top:-20px;
+    left:-300px;
+    padding: 10px 0;
+}
+
+.one_txt_bottom {
+    width:400px;
+    height: 30px;
+    font-size: 3em;
+    font-family: AdobeVF;
+    text-align: center;
+    letter-spacing: 5px;
+    color: black;
+    position: relative;
+    left: 500px;
+    top:-600px;
+    letter-spacing: 4px;
+   word-spacing: 9px
+
+}
+
+.left-align {
+    text-align: left;
+    margin-left: 100px; /* Adds space from the left edge */
+}
+   
+/* Section Two */
+.two {
+    width: 100%;
+    height: 300px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.two .join {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    margin-bottom: -20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+}
+
+.two .join:hover {
+    background-color: blueviolet;
+}
+
+.two_img_center {
+    width: 100%;
+    height: 400px;
+    background: url('images/2021Dream.jpg') center/cover no-repeat;
+    position: relative;
+    margin-top: -60px;
+}
+
+
+.two_txt {
+    width:300px;    
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 20em;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+/* Section Three */
+.three {
+    width: 100%;
+    background-color: #E0FFFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.apps {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -900px;
+    position: relative;
+    top:100px;
+    bottom:50px;
+    color: black;
+}
+
+.appstore{
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+
+} 
+
+.googleplay {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+/* Section Four */
+.four {
+    width: 100%;
+    background-color: #B0C4DE;
+    padding: 60px 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.tect {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center; 
+    word-spacing: 60px;
+}
+
+/* Footer */
+
+
+
+.footer {
+    width: 105%;
+    height: 200px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+
+
+.footer-container {
+    max-width: 1200px; /* Optional: keeps the footer content within a reasonable width */
+    margin: 0 auto; /* Centers the content */
+}
+
+.footer-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers the list items */
+}
+
+.footer-list li {
+    margin: 0 15px; /* Spacing between list items */
+}
+
+.footer-list a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-list a:hover {
+    color: #f0a500; /* Change color on hover */
+}
+
+
+.footer-list2 {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers the list items */
+}
+
+.footer-list2 li {
+    margin: 0 15px; /* Spacing between list items */
+}
+
+.footer-list2 a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-list2 a:hover {
+    color: #f0a500; /* Change color on hover */
+}
+}
+
+
+.footer-list3 {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers the list items */
+}
+
+.footer-list3 li {
+    margin: 0 15px; /* Spacing between list items */
+}
+
+.footer-list3 a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-list3 a:hover {
+    color: #f0a500; /* Change color on hover */
+}

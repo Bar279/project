@@ -1,0 +1,146 @@
+/* General Container Styling */
+.container {
+    width: 100vw; /* makes sure that the "container" div is stretched to the left and right edges of our web browser */
+    height: auto;
+}
+
+/* Section Styling */
+section {
+    position: relative; /* Allows for absolute positioning within each section */
+}
+
+/* Individual Hotel Containers */
+.Hilton, .contain_2, .contain_3 {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Hilton Styles */
+.Hilton {
+    width: 30%;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Hilton img {
+    width: 100%; /* Image takes up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any unwanted space below the image */
+}
+
+.txt_1 {
+    font-size: 1em;
+    font-family: AdobeVF;
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Le Méridien Styles */
+.contain_2 {
+    width: 70%;
+    height: auto;
+    position: relative;
+    left: 150%;
+    top:-450;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contain_2 img {
+    width: 100%; /* Image takes up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any unwanted space below the image */
+}
+
+.txt_2 {
+    font-size: 1em;
+    font-family: AdobeVF;
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Marriott Styles */
+.contain_3 {
+    width: 100vw; /* Ensures container spans the full width */
+    height: auto;
+    margin-top: -350px;
+    padding: 0; /* No padding around the image */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.contain_3 img {
+    width: 100vw; /* Image spans the full viewport width */
+    height: 300px; /* Fixed height to make it a rectangle */
+    object-fit: cover; /* Ensures the image covers the area and maintains aspect ratio */
+    display: block; /* Removes any unwanted space below the image */
+}
+
+.txt_3 {
+    font-size: 1em;
+    font-family: AdobeVF;
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Navigation Bar */
+.navigation {
+    width: 100vw;
+    height: 40px;
+    background: aliceblue;
+    position: relative; /* keeps the navigation bar on top of content */
+    z-index: 1; /* ensures navigation is always on top */
+    padding: 10px 0;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.3em;
+}
+
+li {
+    float: right;
+    margin-left: 20px;
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+li:last-child {
+    float: left;
+    margin-left: 0px;
+    padding: 0;
+}
+
+/* Adjust Container Alignment */
+.one {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 40px;
+    padding: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+
+\
